@@ -1,0 +1,137 @@
+2019/11/11 11:22:55 ######## Profiles #######
+heap profile: 1: 16384 [1: 16384] @ heap/1048576
+1: 16384 [1: 16384] @ 0x4de38c 0x4de2bb 0x4dc957 0x4e82fb 0x4e81aa 0x4e7ce5 0x5e91d5 0x5e917a 0x4583c1
+#	0x4de38b	runtime/pprof.writeHeapInternal+0xab					c:/go/src/runtime/pprof/pprof.go:563
+#	0x4de2ba	runtime/pprof.writeAlloc+0x5a						c:/go/src/runtime/pprof/pprof.go:539
+#	0x4dc956	runtime/pprof.(*Profile).WriteTo+0x396					c:/go/src/runtime/pprof/pprof.go:329
+#	0x4e82fa	github.com/zhangpeihao/log.(*Logger).DumpProf+0xda			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:146
+#	0x4e81a9	github.com/zhangpeihao/log.(*Logger).DumpHeader+0x49			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:137
+#	0x4e7ce4	github.com/zhangpeihao/log.NewLoggerWithHeader+0xf94			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:116
+#	0x5e91d4	github.com/zhangpeihao/log.NewLogger+0x94				G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:55
+#	0x5e9179	github.com/wanghonggao007/rtp2rtmp/muxers.NewRtmpSink.func1+0x39	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/rtmp_sink.go:24
+
+
+# runtime.MemStats
+# Alloc = 178672
+# TotalAlloc = 178672
+# Sys = 5509248
+# Lookups = 0
+# Mallocs = 1509
+# Frees = 61
+# HeapAlloc = 178672
+# HeapSys = 3932160
+# HeapIdle = 2965504
+# HeapInuse = 966656
+# HeapReleased = 0
+# HeapObjects = 1448
+# Stack = 262144 / 262144
+# MSpan = 16128 / 16384
+# MCache = 6816 / 16384
+# BuckHashSys = 2288
+# GCSys = 211072
+# OtherSys = 1068816
+# NextGC = 4473924
+# LastGC = 0
+# PauseNs = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+# PauseEnd = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+# NumGC = 0
+# NumForcedGC = 0
+# GCCPUFraction = 0
+# DebugGC = false
+--- contention:
+cycles/second=2696651274
+goroutine profile: total 17
+6 @ 0x430ed4 0x405a38 0x405a0e 0x4056eb 0x5e8a34 0x4583c1
+#	0x5e8a33	github.com/wanghonggao007/rtp2rtmp/muxers.Bridge.func1+0x43	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/bridge.go:6
+
+2 @ 0x430ed4 0x405a38 0x405a0e 0x4056eb 0x5e9b8e 0x4583c1
+#	0x5e9b8d	github.com/wanghonggao007/rtp2rtmp/muxers.NewRtpDemuxer.func1+0x4d	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/rtp_demuxer.go:22
+
+2 @ 0x430ed4 0x42a811 0x429d7d 0x4a9772 0x4aa074 0x4ac0a0 0x4f61c2 0x507731 0x506af5 0x5eab29 0x4583c1
+#	0x429d7c	internal/poll.runtime_pollWait+0x5c					c:/go/src/runtime/netpoll.go:182
+#	0x4a9771	internal/poll.(*pollDesc).wait+0xa1					c:/go/src/internal/poll/fd_poll_runtime.go:87
+#	0x4aa073	internal/poll.(*ioSrv).ExecIO+0x123					c:/go/src/internal/poll/fd_windows.go:228
+#	0x4ac09f	internal/poll.(*FD).ReadFrom+0x11f					c:/go/src/internal/poll/fd_windows.go:642
+#	0x4f61c1	net.(*netFD).readFrom+0x61						c:/go/src/net/fd_windows.go:158
+#	0x507730	net.(*UDPConn).readFrom+0x70						c:/go/src/net/udpsock_posix.go:47
+#	0x506af4	net.(*UDPConn).ReadFrom+0x64						c:/go/src/net/udpsock.go:121
+#	0x5eab28	github.com/wanghonggao007/rtp2rtmp/muxers.NewUdpSource.func1+0x1d8	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/udp_source.go:31
+
+1 @ 0x430ed4 0x404dd9 0x404daf 0x404b85 0x5e8a60 0x4583c1
+#	0x5e8a5f	github.com/wanghonggao007/rtp2rtmp/muxers.Bridge.func1+0x6f	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/bridge.go:7
+
+1 @ 0x430ed4 0x405a38 0x405a0e 0x4056eb 0x5e9d55 0x4583c1
+#	0x5e9d54	github.com/wanghonggao007/rtp2rtmp/muxers.NewRtpH264Depacketizer.func1+0x84	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/rtp_h264_depacketizer.go:20
+
+1 @ 0x430ed4 0x405a38 0x405a0e 0x4056eb 0x5ea27e 0x4583c1
+#	0x5ea27d	github.com/wanghonggao007/rtp2rtmp/muxers.NewRtpMPESDepacketizer.func1+0x8d	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/rtp_mpes_depacketizer.go:18
+
+1 @ 0x430ed4 0x43df20 0x5eb1a4 0x430aec 0x4583c1
+#	0x5eb1a3	main.main+0x1f3		G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/main.go:42
+#	0x430aeb	runtime.main+0x20b	c:/go/src/runtime/proc.go:200
+
+1 @ 0x430ed4 0x43ec11 0x4e8c6a 0x4583c1
+#	0x4e8c69	github.com/zhangpeihao/log.(*Logger).counterDump+0x449	G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:360
+
+1 @ 0x430ed4 0x43ec11 0x5e8d09 0x4583c1
+#	0x5e8d08	github.com/wanghonggao007/rtp2rtmp/muxers.NewFlvMuxer.func1+0x298	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/flv_muxer.go:53
+
+1 @ 0x4dffc7 0x4dfdd7 0x4dc957 0x4e82fb 0x4e81aa 0x4e7ce5 0x5e91d5 0x5e917a 0x4583c1
+#	0x4dffc6	runtime/pprof.writeRuntimeProfile+0x96					c:/go/src/runtime/pprof/pprof.go:708
+#	0x4dfdd6	runtime/pprof.writeGoroutine+0xa6					c:/go/src/runtime/pprof/pprof.go:670
+#	0x4dc956	runtime/pprof.(*Profile).WriteTo+0x396					c:/go/src/runtime/pprof/pprof.go:329
+#	0x4e82fa	github.com/zhangpeihao/log.(*Logger).DumpProf+0xda			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:146
+#	0x4e81a9	github.com/zhangpeihao/log.(*Logger).DumpHeader+0x49			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:137
+#	0x4e7ce4	github.com/zhangpeihao/log.NewLoggerWithHeader+0xf94			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:116
+#	0x5e91d4	github.com/zhangpeihao/log.NewLogger+0x94				G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:55
+#	0x5e9179	github.com/wanghonggao007/rtp2rtmp/muxers.NewRtmpSink.func1+0x39	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/rtmp_sink.go:24
+
+heap profile: 1: 16384 [1: 16384] @ heap/1048576
+1: 16384 [1: 16384] @ 0x4de38c 0x4de2bb 0x4dc957 0x4e82fb 0x4e81aa 0x4e7ce5 0x5e91d5 0x5e917a 0x4583c1
+#	0x4de38b	runtime/pprof.writeHeapInternal+0xab					c:/go/src/runtime/pprof/pprof.go:563
+#	0x4de2ba	runtime/pprof.writeAlloc+0x5a						c:/go/src/runtime/pprof/pprof.go:539
+#	0x4dc956	runtime/pprof.(*Profile).WriteTo+0x396					c:/go/src/runtime/pprof/pprof.go:329
+#	0x4e82fa	github.com/zhangpeihao/log.(*Logger).DumpProf+0xda			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:146
+#	0x4e81a9	github.com/zhangpeihao/log.(*Logger).DumpHeader+0x49			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:137
+#	0x4e7ce4	github.com/zhangpeihao/log.NewLoggerWithHeader+0xf94			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:116
+#	0x5e91d4	github.com/zhangpeihao/log.NewLogger+0x94				G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:55
+#	0x5e9179	github.com/wanghonggao007/rtp2rtmp/muxers.NewRtmpSink.func1+0x39	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/rtmp_sink.go:24
+
+
+# runtime.MemStats
+# Alloc = 270176
+# TotalAlloc = 270176
+# Sys = 6949240
+# Lookups = 0
+# Mallocs = 1972
+# Frees = 191
+# HeapAlloc = 270176
+# HeapSys = 3932160
+# HeapIdle = 2727936
+# HeapInuse = 1204224
+# HeapReleased = 0
+# HeapObjects = 1781
+# Stack = 262144 / 262144
+# MSpan = 17712 / 32768
+# MCache = 6816 / 16384
+# BuckHashSys = 1442528
+# GCSys = 211072
+# OtherSys = 1052184
+# NextGC = 4473924
+# LastGC = 0
+# PauseNs = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+# PauseEnd = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+# NumGC = 0
+# NumForcedGC = 0
+# GCCPUFraction = 0
+# DebugGC = false
+--- mutex:
+cycles/second=2696651274
+sampling period=0
+threadcreate profile: total 7
+7 @
+#	0x0
+
+######## Heap #######
+ã     ˇåë¡k‘@∆7Ÿ…Ól∂€æná"Çá∂`R°RO°[-Z(x©iúŒ∆f3a2a’”ÇxoOﬁÙ§ËIJ±'äx/‚†ﬁ€K%ì"≠–≈C ôﬂ˜˝ﬁraÃªÉÅc#\d#lÅi#\”Ôu0]¿˘˘{«t-l¿!cc0¡N√líwüv
+f¬Ûíô`[≥*˘∂•{U¯jÍ^ö§©"OvãÇ-C3#dƒiπÄ-Ú˙±f<-ô£d‘iπc∏F~Ï0›bA•k5#c’…ﬁ´É’aN£: ç0Ÿ©¢Üq2Ó¥€–FïJ•bc√¨"´V«.‡yˆEØm¿{Üÿ&ªüıI^îól¿ôpÌsmÏº˘ËèçvÈò¨aìFÁÌ˜ÌΩÉÌ√_g&6Æ¥B≠,BF≠ıáäe¥ƒ±◊ƒ˙}™åZ°»EõÅ>-ì≠(…3ˆ7“,?Kv^ÊâäzÃOS)6ºæåÎ∞ ]JìIS'ú˜π3˙ÚxÙ®¿={äÇ:'¡‘Ã≤QÃ¶Ω’bÃä†y§∫˘∫äûˇ®$<eQ7~,∏75s]pŒ‰¥w-Ô•Eï^^ú˜˚Bn˙ã7óV:z©”⁄¬˘gHá˜ò§ﬁÈNÔÎók≠F™{îø?yzıX™$º+Œ1;;ÁKïR©z©ﬂÀ0ôCn©^z;J6Ωç<	/—•·7ÓÛ˜ZVÿ∏†‰‰_ÈÀH±Ö8·ü   ˇˇ¬gºÓ»  ######## End #######

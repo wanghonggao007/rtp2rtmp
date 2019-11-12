@@ -1,0 +1,149 @@
+2019/11/11 15:21:49 ######## Profiles #######
+heap profile: 1: 80 [1: 80] @ heap/1048576
+1: 80 [1: 80] @ 0x48c687 0x48dddf 0x49aa80 0x49a786 0x4a648c 0x4a66b5 0x4a6b07 0x4a6f93 0x4a7575 0x46a83a 0x4a38cf 0x4a37e6 0x4a46a6 0x4bfa3f 0x4bfa27 0x4bfe17 0x4c03b3 0x5ea9e8 0x430aec 0x4583c1
+#	0x48c686	unicode/utf16.Decode+0x46					c:/go/src/unicode/utf16/utf16.go:89
+#	0x48ddde	syscall.UTF16ToString+0x5e					c:/go/src/syscall/syscall_windows.go:56
+#	0x49aa7f	internal/syscall/windows/registry.ExpandString+0x15f		c:/go/src/internal/syscall/windows/registry/value.go:189
+#	0x49a785	internal/syscall/windows/registry.Key.GetMUIStringValue+0x2a5	c:/go/src/internal/syscall/windows/registry/value.go:143
+#	0x4a648b	time.matchZoneKey+0x32b						c:/go/src/time/zoneinfo_windows.go:38
+#	0x4a66b4	time.toEnglishName+0x174					c:/go/src/time/zoneinfo_windows.go:75
+#	0x4a6b06	time.abbrev+0x106						c:/go/src/time/zoneinfo_windows.go:101
+#	0x4a6f92	time.initLocalFromTZI+0xd2					c:/go/src/time/zoneinfo_windows.go:153
+#	0x4a7574	time.initLocal+0xc4						c:/go/src/time/zoneinfo_windows.go:241
+#	0x46a839	sync.(*Once).Do+0xb9						c:/go/src/sync/once.go:44
+#	0x4a38ce	time.(*Location).get+0x12e					c:/go/src/time/zoneinfo.go:79
+#	0x4a37e5	time.Time.abs+0x45						c:/go/src/time/time.go:459
+#	0x4a46a5	time.Time.date+0x45						c:/go/src/time/time.go:968
+#	0x4bfa3e	time.Time.Date+0x79e						c:/go/src/time/time.go:499
+#	0x4bfa26	log.(*Logger).formatHeader+0x786				c:/go/src/log/log.go:103
+#	0x4bfe16	log.(*Logger).Output+0x116					c:/go/src/log/log.go:167
+#	0x4c03b2	log.Println+0x72						c:/go/src/log/log.go:308
+#	0x5ea9e7	main.main+0x67							G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/main.go:10
+#	0x430aeb	runtime.main+0x20b						c:/go/src/runtime/proc.go:200
+
+
+# runtime.MemStats
+# Alloc = 184752
+# TotalAlloc = 184752
+# Sys = 6687096
+# Lookups = 0
+# Mallocs = 1534
+# Frees = 77
+# HeapAlloc = 184752
+# HeapSys = 3997696
+# HeapIdle = 3137536
+# HeapInuse = 860160
+# HeapReleased = 0
+# HeapObjects = 1457
+# Stack = 196608 / 196608
+# MSpan = 13968 / 16384
+# MCache = 6816 / 16384
+# BuckHashSys = 1442616
+# GCSys = 211072
+# OtherSys = 806336
+# NextGC = 4473924
+# LastGC = 0
+# PauseNs = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+# PauseEnd = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+# NumGC = 0
+# NumForcedGC = 0
+# GCCPUFraction = 0
+# DebugGC = false
+--- contention:
+cycles/second=2709502807
+goroutine profile: total 11
+4 @ 0x430ed4 0x404dd9 0x404daf 0x404b85 0x5e8c40 0x4583c1
+#	0x5e8c3f	github.com/wanghonggao007/rtp2rtmp/muxers.Bridge.func1+0x6f	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/bridge.go:7
+
+1 @ 0x430ed4 0x404dd9 0x404daf 0x404b85 0x5e90a7 0x4583c1
+#	0x5e90a6	github.com/wanghonggao007/rtp2rtmp/muxers.NewFlvMuxer.func1+0x456	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/flv_muxer.go:77
+
+1 @ 0x430ed4 0x404dd9 0x404daf 0x404b85 0x5e9e81 0x4583c1
+#	0x5e9e80	github.com/wanghonggao007/rtp2rtmp/muxers.NewRtpDemuxer.func1+0x160	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/rtp_demuxer.go:28
+
+1 @ 0x430ed4 0x404dd9 0x404daf 0x404b85 0x5ea377 0x4583c1
+#	0x5ea376	github.com/wanghonggao007/rtp2rtmp/muxers.NewRtpH264Depacketizer.func1+0x4c6	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/rtp_h264_depacketizer.go:51
+
+1 @ 0x430ed4 0x404dd9 0x404daf 0x404b85 0x5ea62c 0x4583c1
+#	0x5ea62b	github.com/wanghonggao007/rtp2rtmp/muxers.NewUdpSource.func1+0x25b	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/udp_source.go:38
+
+1 @ 0x430ed4 0x43df20 0x5eaae1 0x430aec 0x4583c1
+#	0x5eaae0	main.main+0x160		G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/main.go:44
+#	0x430aeb	runtime.main+0x20b	c:/go/src/runtime/proc.go:200
+
+1 @ 0x430ed4 0x43ec11 0x4e8c6a 0x4583c1
+#	0x4e8c69	github.com/zhangpeihao/log.(*Logger).counterDump+0x449	G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:360
+
+1 @ 0x4dffc7 0x4dfdd7 0x4dc957 0x4e82fb 0x4e81aa 0x4e7ce5 0x5e93b5 0x5e935a 0x4583c1
+#	0x4dffc6	runtime/pprof.writeRuntimeProfile+0x96					c:/go/src/runtime/pprof/pprof.go:708
+#	0x4dfdd6	runtime/pprof.writeGoroutine+0xa6					c:/go/src/runtime/pprof/pprof.go:670
+#	0x4dc956	runtime/pprof.(*Profile).WriteTo+0x396					c:/go/src/runtime/pprof/pprof.go:329
+#	0x4e82fa	github.com/zhangpeihao/log.(*Logger).DumpProf+0xda			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:146
+#	0x4e81a9	github.com/zhangpeihao/log.(*Logger).DumpHeader+0x49			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:137
+#	0x4e7ce4	github.com/zhangpeihao/log.NewLoggerWithHeader+0xf94			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:116
+#	0x5e93b4	github.com/zhangpeihao/log.NewLogger+0x94				G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:55
+#	0x5e9359	github.com/wanghonggao007/rtp2rtmp/muxers.NewRtmpSink.func1+0x39	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/rtmp_sink.go:24
+
+heap profile: 1: 80 [1: 80] @ heap/1048576
+1: 80 [1: 80] @ 0x48c687 0x48dddf 0x49aa80 0x49a786 0x4a648c 0x4a66b5 0x4a6b07 0x4a6f93 0x4a7575 0x46a83a 0x4a38cf 0x4a37e6 0x4a46a6 0x4bfa3f 0x4bfa27 0x4bfe17 0x4c03b3 0x5ea9e8 0x430aec 0x4583c1
+#	0x48c686	unicode/utf16.Decode+0x46					c:/go/src/unicode/utf16/utf16.go:89
+#	0x48ddde	syscall.UTF16ToString+0x5e					c:/go/src/syscall/syscall_windows.go:56
+#	0x49aa7f	internal/syscall/windows/registry.ExpandString+0x15f		c:/go/src/internal/syscall/windows/registry/value.go:189
+#	0x49a785	internal/syscall/windows/registry.Key.GetMUIStringValue+0x2a5	c:/go/src/internal/syscall/windows/registry/value.go:143
+#	0x4a648b	time.matchZoneKey+0x32b						c:/go/src/time/zoneinfo_windows.go:38
+#	0x4a66b4	time.toEnglishName+0x174					c:/go/src/time/zoneinfo_windows.go:75
+#	0x4a6b06	time.abbrev+0x106						c:/go/src/time/zoneinfo_windows.go:101
+#	0x4a6f92	time.initLocalFromTZI+0xd2					c:/go/src/time/zoneinfo_windows.go:153
+#	0x4a7574	time.initLocal+0xc4						c:/go/src/time/zoneinfo_windows.go:241
+#	0x46a839	sync.(*Once).Do+0xb9						c:/go/src/sync/once.go:44
+#	0x4a38ce	time.(*Location).get+0x12e					c:/go/src/time/zoneinfo.go:79
+#	0x4a37e5	time.Time.abs+0x45						c:/go/src/time/time.go:459
+#	0x4a46a5	time.Time.date+0x45						c:/go/src/time/time.go:968
+#	0x4bfa3e	time.Time.Date+0x79e						c:/go/src/time/time.go:499
+#	0x4bfa26	log.(*Logger).formatHeader+0x786				c:/go/src/log/log.go:103
+#	0x4bfe16	log.(*Logger).Output+0x116					c:/go/src/log/log.go:167
+#	0x4c03b2	log.Println+0x72						c:/go/src/log/log.go:308
+#	0x5ea9e7	main.main+0x67							G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/main.go:10
+#	0x430aeb	runtime.main+0x20b						c:/go/src/runtime/proc.go:200
+
+
+# runtime.MemStats
+# Alloc = 263136
+# TotalAlloc = 263136
+# Sys = 6687096
+# Lookups = 0
+# Mallocs = 1969
+# Frees = 193
+# HeapAlloc = 263136
+# HeapSys = 3997696
+# HeapIdle = 2949120
+# HeapInuse = 1048576
+# HeapReleased = 0
+# HeapObjects = 1776
+# Stack = 196608 / 196608
+# MSpan = 15264 / 16384
+# MCache = 6816 / 16384
+# BuckHashSys = 1442616
+# GCSys = 211072
+# OtherSys = 806336
+# NextGC = 4473924
+# LastGC = 0
+# PauseNs = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+# PauseEnd = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+# NumGC = 0
+# NumForcedGC = 0
+# GCCPUFraction = 0
+# DebugGC = false
+--- mutex:
+cycles/second=2709502807
+sampling period=0
+threadcreate profile: total 7
+7 @
+#	0x0
+
+######## Heap #######
+‹     ÿ„’]hUÇİÙÙìİÙ9û‘ötû5m‚Ì´WiKÁ!mR¢&`*˜—8;¹™ŒîŞ»ÌÜi\Ÿ‚`}ĞRì«XÓ'Eú"¢Ïñ}}*BûPŠ}A¹wb7yêCnöœßùÿÿç,»l’¯ln:–IŠ`Z&)a™dB.ƒáÚ¤€—¯|d¸jôe(LR ‚Ä©¸61ğ÷/52àŒFXh9UHÿıùºá–H¾*hV„ÖœºÄÄ·~ĞÌ„«93¡§îÚ¤„ï|sC¥•àq-+¶®M&ğæwMÀ¼FĞÄ¦Fe¼ü‹Fe`•¡…-\ ßûã†Z„À‡y6¶5«àƒ;šUà~Î*ĞÁ¶´ğ‹¯©E,xR[Z0‰“Î×&Uüşş–BUXĞ¨
+{q¯ƒ.Ş¾·¥ÒjğmQ³ìÃ}N×RÇ¯è´:Ü*kV‡ı¸_³~ıàS¥kÀ_¹®ğ€ÓumbãuÅLbC¤e6ÄƒÎ!àÿhÀ'ù ‡ñ°fMüüíÏ”enZ×çk“şùÓßê‚Xµàq\Hï¾ÿ®’µáVnÙ†£xÔ9Öz¢e]{jkÓÑÕ.E³4Q&«Z«7lh¶Ú]“¸8÷Û½Ûw®şúæİÉ®I
+g
+ô1ZJ‡AÈh©7’,¥õ ßáŠè½ÊB™ÒR(2.i5ïæ“õ˜g)[Û#Õ¼ÌY'ãq(V™ŸÉµ“§¼¦
+ê„gıHøiú»øöT$èd:JÃ ß÷..?yjI¼(“˜GôØX¸=ğÿÿ•˜¯ŠT‰½˜K–ğà!ô·¡Ÿ°(Ne2òÎ½>øê¶ëÓc×G*ıKA?c*åô#g½y6òf™|şâ…<é%¥¥M˜7d¸¾,8›g#ê7PĞCpó5±óª–"çxÔÓõ‚£Uİz½„]¢“ºˆy,ŸaĞ?ŸˆÁÒòÚØİ¦v:â¡w|z‡lÊ›tÏ8\!_ğPØÑÂãÓÊMÆ‚Oy“´;Vüáªê+©«·¤ÎzéNcô£ÆòôØj ÙÎzFÕİ¾ˆtn±dÊ[É s,Xe	íŒãû"RÊ±³[±Éa&iUu“˜Ë>§•AsO=ô™Ù³ş†H^ógŸ]šÓ¿Ã(–ëYÏÅÀßx´.xâÄ‰Ó~"‡4‘ƒ¡¯´*¬–d\İ“›í/”d\Ææz‘ø/  ÿÿGe1¨²  ######## End #######

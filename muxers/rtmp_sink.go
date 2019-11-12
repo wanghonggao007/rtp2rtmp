@@ -1,19 +1,21 @@
 package muxers
 
 import (
-	"github.com/zhangpeihao/gortmp"
-	"github.com/zhangpeihao/log"
 	"fmt"
 	"time"
+
+	rtmp "github.com/wanghonggao007/gortmp"
+
+	"github.com/zhangpeihao/log"
 )
 
 type RtmpSink struct {
-	InputChan chan interface {}
+	InputChan chan interface{}
 }
 
 func NewRtmpSink(url, name string) *RtmpSink {
 	sink := &RtmpSink{
-		InputChan: make(chan interface {}),
+		InputChan: make(chan interface{}),
 	}
 
 	go func() {
@@ -25,8 +27,13 @@ func NewRtmpSink(url, name string) *RtmpSink {
 		handler := &RtmpSinkHandler{}
 		handler.createStreamChan = make(chan rtmp.OutboundStream)
 		handler.flvChan = sink.InputChan
-
+		//////////////////////
+		fmt.Println("开始推流到服务器：", url, handler.obConn)
+		/////////////////////
 		handler.obConn, err = rtmp.Dial(url, handler, 100)
+		//////////////////////
+		fmt.Println("推流到服务器成功：", url, handler.obConn, err)
+		/////////////////////
 		if err != nil {
 			fmt.Println("Rtmp dial error", err)
 			return
@@ -58,17 +65,24 @@ func NewRtmpSink(url, name string) *RtmpSink {
 }
 
 type RtmpSinkHandler struct {
-	status uint
-	obConn rtmp.OutboundConn
+	status           uint
+	obConn           rtmp.OutboundConn
 	createStreamChan chan rtmp.OutboundStream
-	videoDataSize int64
-	audioDataSize int64
-	flvChan chan interface {}
+	videoDataSize    int64
+	audioDataSize    int64
+	flvChan          chan interface{}
 }
 
 func (handler *RtmpSinkHandler) OnStatus(conn rtmp.OutboundConn) {
+	fmt.Println("============RtmpSinkHandler OnStatus1:", handler.obConn)
 	var err error
+	if handler.obConn == nil {
+		fmt.Println("=================Warning:", "handler.obConn is", handler.obConn)
+		//handler.obConn = conn
+		return
+	}
 	handler.status, err = handler.obConn.Status()
+	fmt.Println("============RtmpSinkHandler OnStatus2")
 	fmt.Printf("@@@@@@@@@@@@@status: %d, err: %v\n", handler.status, err)
 }
 

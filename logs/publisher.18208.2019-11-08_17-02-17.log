@@ -1,0 +1,142 @@
+2019/11/08 17:02:17 ######## Profiles #######
+heap profile: 0: 0 [0: 0] @ heap/1048576
+
+# runtime.MemStats
+# Alloc = 175480
+# TotalAlloc = 175480
+# Sys = 5247104
+# Lookups = 0
+# Mallocs = 1496
+# Frees = 59
+# HeapAlloc = 175480
+# HeapSys = 3932160
+# HeapIdle = 2965504
+# HeapInuse = 966656
+# HeapReleased = 0
+# HeapObjects = 1437
+# Stack = 262144 / 262144
+# MSpan = 16128 / 16384
+# MCache = 6816 / 16384
+# BuckHashSys = 2288
+# GCSys = 211072
+# OtherSys = 806672
+# NextGC = 4473924
+# LastGC = 0
+# PauseNs = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+# PauseEnd = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+# NumGC = 0
+# NumForcedGC = 0
+# GCCPUFraction = 0
+# DebugGC = false
+--- contention:
+cycles/second=2697818782
+goroutine profile: total 16
+6 @ 0x431054 0x405bb8 0x405b8e 0x40586b 0x5e8534 0x458541
+#	0x5e8533	github.com/wanghonggao007/rtp2rtmp/muxers.Bridge.func1+0x43	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/bridge.go:6
+
+2 @ 0x431054 0x405bb8 0x405b8e 0x40586b 0x5e948e 0x458541
+#	0x5e948d	github.com/wanghonggao007/rtp2rtmp/muxers.NewRtpDemuxer.func1+0x4d	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/rtp_demuxer.go:22
+
+1 @ 0x431054 0x404f59 0x404f2f 0x404d05 0x5e8560 0x458541
+#	0x5e855f	github.com/wanghonggao007/rtp2rtmp/muxers.Bridge.func1+0x6f	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/bridge.go:7
+
+1 @ 0x431054 0x405bb8 0x405b8e 0x40586b 0x5e9655 0x458541
+#	0x5e9654	github.com/wanghonggao007/rtp2rtmp/muxers.NewRtpH264Depacketizer.func1+0x84	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/rtp_h264_depacketizer.go:20
+
+1 @ 0x431054 0x405bb8 0x405b8e 0x40586b 0x5e9b7e 0x458541
+#	0x5e9b7d	github.com/wanghonggao007/rtp2rtmp/muxers.NewRtpMPESDepacketizer.func1+0x8d	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/rtp_mpes_depacketizer.go:18
+
+1 @ 0x431054 0x42a991 0x429efd 0x4b1ea2 0x4b27a4 0x4b47d0 0x4f6132 0x5076a1 0x506a65 0x5ea3b4 0x458541
+#	0x429efc	internal/poll.runtime_pollWait+0x5c					c:/go/src/runtime/netpoll.go:182
+#	0x4b1ea1	internal/poll.(*pollDesc).wait+0xa1					c:/go/src/internal/poll/fd_poll_runtime.go:87
+#	0x4b27a3	internal/poll.(*ioSrv).ExecIO+0x123					c:/go/src/internal/poll/fd_windows.go:228
+#	0x4b47cf	internal/poll.(*FD).ReadFrom+0x11f					c:/go/src/internal/poll/fd_windows.go:642
+#	0x4f6131	net.(*netFD).readFrom+0x61						c:/go/src/net/fd_windows.go:158
+#	0x5076a0	net.(*UDPConn).readFrom+0x70						c:/go/src/net/udpsock_posix.go:47
+#	0x506a64	net.(*UDPConn).ReadFrom+0x64						c:/go/src/net/udpsock.go:121
+#	0x5ea3b3	github.com/wanghonggao007/rtp2rtmp/muxers.NewUdpSource.func1+0x163	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/udp_source.go:27
+
+1 @ 0x431054 0x43e0a0 0x5ea931 0x430c6c 0x458541
+#	0x5ea930	main.main+0x1b0		G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/main.go:40
+#	0x430c6b	runtime.main+0x20b	c:/go/src/runtime/proc.go:200
+
+1 @ 0x431054 0x43ed91 0x4e8bda 0x458541
+#	0x4e8bd9	github.com/zhangpeihao/log.(*Logger).counterDump+0x449	G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:360
+
+1 @ 0x431054 0x43ed91 0x5e8809 0x458541
+#	0x5e8808	github.com/wanghonggao007/rtp2rtmp/muxers.NewFlvMuxer.func1+0x298	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/flv_muxer.go:53
+
+1 @ 0x4dff37 0x4dfd47 0x4dc8c7 0x4e826b 0x4e811a 0x4e7c55 0x5e8cd5 0x5e8c7a 0x458541
+#	0x4dff36	runtime/pprof.writeRuntimeProfile+0x96					c:/go/src/runtime/pprof/pprof.go:708
+#	0x4dfd46	runtime/pprof.writeGoroutine+0xa6					c:/go/src/runtime/pprof/pprof.go:670
+#	0x4dc8c6	runtime/pprof.(*Profile).WriteTo+0x396					c:/go/src/runtime/pprof/pprof.go:329
+#	0x4e826a	github.com/zhangpeihao/log.(*Logger).DumpProf+0xda			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:146
+#	0x4e8119	github.com/zhangpeihao/log.(*Logger).DumpHeader+0x49			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:137
+#	0x4e7c54	github.com/zhangpeihao/log.NewLoggerWithHeader+0xf94			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:116
+#	0x5e8cd4	github.com/zhangpeihao/log.NewLogger+0x94				G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:55
+#	0x5e8c79	github.com/wanghonggao007/rtp2rtmp/muxers.NewRtmpSink.func1+0x39	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/rtmp_sink.go:24
+
+heap profile: 1: 3456 [1: 3456] @ heap/1048576
+1: 3456 [1: 3456] @ 0x469b34 0x4694d6 0x46975d 0x4d017c 0x4d06a1 0x4d0b14 0x4d0e98 0x4d14aa 0x4d1499 0x4bef4c 0x4dd495 0x4dffc4 0x4dfd47 0x4dc8c7 0x4e826b 0x4e811a 0x4e7c55 0x5e8cd5 0x5e8c7a 0x458541
+#	0x469b33	bytes.makeSlice+0x73							c:/go/src/bytes/buffer.go:232
+#	0x4694d5	bytes.(*Buffer).grow+0x175						c:/go/src/bytes/buffer.go:145
+#	0x46975c	bytes.(*Buffer).Write+0xec						c:/go/src/bytes/buffer.go:175
+#	0x4d017b	text/tabwriter.(*Writer).write0+0x5b					c:/go/src/text/tabwriter/tabwriter.go:254
+#	0x4d06a0	text/tabwriter.(*Writer).writeLines+0x280				c:/go/src/text/tabwriter/tabwriter.go:321
+#	0x4d0b13	text/tabwriter.(*Writer).format+0x293					c:/go/src/text/tabwriter/tabwriter.go:409
+#	0x4d0e97	text/tabwriter.(*Writer).flush+0x147					c:/go/src/text/tabwriter/tabwriter.go:508
+#	0x4d14a9	text/tabwriter.(*Writer).Flush+0x509					c:/go/src/text/tabwriter/tabwriter.go:491
+#	0x4d1498	text/tabwriter.(*Writer).Write+0x4f8					c:/go/src/text/tabwriter/tabwriter.go:542
+#	0x4bef4b	fmt.Fprintf+0xab							c:/go/src/fmt/print.go:200
+#	0x4dd494	runtime/pprof.printCountProfile+0x6a4					c:/go/src/runtime/pprof/pprof.go:438
+#	0x4dffc3	runtime/pprof.writeRuntimeProfile+0x123					c:/go/src/runtime/pprof/pprof.go:716
+#	0x4dfd46	runtime/pprof.writeGoroutine+0xa6					c:/go/src/runtime/pprof/pprof.go:670
+#	0x4dc8c6	runtime/pprof.(*Profile).WriteTo+0x396					c:/go/src/runtime/pprof/pprof.go:329
+#	0x4e826a	github.com/zhangpeihao/log.(*Logger).DumpProf+0xda			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:146
+#	0x4e8119	github.com/zhangpeihao/log.(*Logger).DumpHeader+0x49			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:137
+#	0x4e7c54	github.com/zhangpeihao/log.NewLoggerWithHeader+0xf94			G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:116
+#	0x5e8cd4	github.com/zhangpeihao/log.NewLogger+0x94				G:/work/GOPATH/src/github.com/zhangpeihao/log/log.go:55
+#	0x5e8c79	github.com/wanghonggao007/rtp2rtmp/muxers.NewRtmpSink.func1+0x39	G:/work/GOPATH/src/github.com/wanghonggao007/rtp2rtmp/muxers/rtmp_sink.go:24
+
+
+# runtime.MemStats
+# Alloc = 253480
+# TotalAlloc = 253480
+# Sys = 6687096
+# Lookups = 0
+# Mallocs = 1865
+# Frees = 163
+# HeapAlloc = 253480
+# HeapSys = 3932160
+# HeapIdle = 2777088
+# HeapInuse = 1155072
+# HeapReleased = 0
+# HeapObjects = 1702
+# Stack = 262144 / 262144
+# MSpan = 17424 / 32768
+# MCache = 6816 / 16384
+# BuckHashSys = 1442616
+# GCSys = 211072
+# OtherSys = 789952
+# NextGC = 4473924
+# LastGC = 0
+# PauseNs = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+# PauseEnd = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+# NumGC = 0
+# NumForcedGC = 0
+# GCCPUFraction = 0
+# DebugGC = false
+--- mutex:
+cycles/second=2697818782
+sampling period=0
+threadcreate profile: total 6
+6 @
+#	0x0
+
+######## Heap #######
+‹     ÿŒÒMlÜTpìµ“ï×ìnÓN>š˜¤$vxB**'>Ô©‚ª­T‰KðÛëfígÙÏJáU\8)AAÅ5z Á­Bª¨àXnˆ3*âò8(Ýˆ,½¬Öó›ù¿7»~]c
+¨olnš†Æ* ÓA546FßÇAíSðó[»jWg
+ü¬€²Ä˜™9Ñ¦â{»…©°Uš
+düñ3š«ÀÍÒ*PÅ*™†\ý¢˜Óà¯Ò4¨aÍ¬wéøé52n«tžláû’ÁN…lšØ$Ç>!‡?K@ c¸·GÆà—Ò´°E6Û¥MÀ2' m2¿ûéfqO¾-ïi@;æ±.°*~°÷eaU¸UfVa'Íã]`5üæo²|¯SfNà	²:Þy@V‡¥ÕÉxg‹¬wËÝ0…SdM¼ÿÎ×ÅyM¸^Þ¥	Ó8mÎtî\%x·4€Yœ5gºMÖÂ{¿}¥v5ÖIWiÁI<IÔÆ{;
+jÃ)¢6ÌáQß&ê u`çM³½Ð6¶•Û×Lú0:ŠZÑô±q6aTkõFZíÎ´ÎTÜœYýxk÷ú¯ïÝ½?9­1å9…?Æõ,q\ë½·¤—ñº3wMô.{®Ì¸îŠ<–¼êÂ]ËÇõx=ŒóÌ[½ËÔRé1£”&¥X‘³î]„®Ç§ÜÓv ì,um"»—û¾—ZàÇ¨`-,½H¥E+HÅŸ<\½”†ÒãóÒ»"méô6ŠÇÔZX¢zºhQa™?upÐpëCCàOãáœ³aìe#óE9’Ï™âò¬?ÂÏüÓV¼êGÒ:“¤a,}~ü`3?’6U‹UæÓ<–aäÙI’
+ß¢úK"å¹TøáÀãæÁàPëþ@ øãCõò§<_¦þ2û-+"¹c›Ãº°´?¶X.rQð§ƒPöóžåŠÈ~»ïÄAâ…}GØXKgEâËy”£üÙ•Óö†H×í•×Î½pq•^œ£(%|DË¡CV=çM/åÖÑ™Ö«ÞFy­K¡ìï÷?ù(ýüù‡º6œ8è‹8±¼|ÊNeÂS%v”_ñÒ¬8ä¼Œ’a¼nùyì>Ã_½ùè<;•Q²–…ñºˆ  ÿÿäïrB  ######## End #######

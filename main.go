@@ -1,31 +1,34 @@
 package main
 
 import (
-	"./muxers"
+	"log"
+
+	"github.com/wanghonggao007/rtp2rtmp/muxers"
 )
 
 func main() {
-
-
-	videoUdpSource := muxers.NewUdpSource(5000)
+	log.Println("main")
+	videoUdpSource := muxers.NewUdpSource(6000)
 	videoRtpDemuxer := muxers.NewRtpDemuxer()
 	videoRtpH264Demuxer := muxers.NewRtpH264Depacketizer()
 
 	flvMuxer := muxers.NewFlvMuxer()
-	rtmpSink := muxers.NewRtmpSink("rtmp://s1.transcoding.svoe.tv/gst", "test")
+	//rtmpSink := muxers.NewRtmpSink("rtmp://127.0.0.1:1935/live/movie", "live")
+	rtmpSink := muxers.NewRtmpSink("rtmp://127.0.0.1:1935/live", "1111")
 
 	muxers.Bridge(videoUdpSource.OutputChan, videoRtpDemuxer.InputChan)
 	muxers.Bridge(videoRtpDemuxer.OutputChan, videoRtpH264Demuxer.InputChan)
 	muxers.Bridge(videoRtpH264Demuxer.OutputChan, flvMuxer.InputVideoChan)
 
-	audioUdpSource := muxers.NewUdpSource(5002)
-	audioRtpDemuxer := muxers.NewRtpDemuxer()
-	audioRtpMPESDepacketizer := muxers.NewRtpMPESDepacketizer()
+	/*
+		audioUdpSource := muxers.NewUdpSource(6001)
+		audioRtpDemuxer := muxers.NewRtpDemuxer()
+		audioRtpMPESDepacketizer := muxers.NewRtpMPESDepacketizer()
 
-	muxers.Bridge(audioUdpSource.OutputChan, audioRtpDemuxer.InputChan)
-	muxers.Bridge(audioRtpDemuxer.OutputChan, audioRtpMPESDepacketizer.InputChan)
-	muxers.Bridge(audioRtpMPESDepacketizer.OutputChan, flvMuxer.InputAudioChan)
-
+		muxers.Bridge(audioUdpSource.OutputChan, audioRtpDemuxer.InputChan)
+		muxers.Bridge(audioRtpDemuxer.OutputChan, audioRtpMPESDepacketizer.InputChan)
+		muxers.Bridge(audioRtpMPESDepacketizer.OutputChan, flvMuxer.InputAudioChan)
+	*/
 	muxers.Bridge(flvMuxer.OutputChan, rtmpSink.InputChan)
 
 	//go func() {
